@@ -11,7 +11,7 @@
 #import "CustomPresent_sideFirstVC.h"
 #import "DissolveFirstVC.h"
 #import "Swipe_First_VC.h"
-
+#import "AdaptiveFirstControl.h"
 
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -49,7 +49,7 @@
     self.view.backgroundColor = [UIColor redColor];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 
-    self.dataSouce = [NSMutableArray arrayWithObjects:@"custompresent_Botom",@"custompresent_right", @"Dissolve",@"Swipe",nil];
+    self.dataSouce = [NSMutableArray arrayWithObjects:@"custompresent_Botom",@"custompresent_right", @"Dissolve",@"Swipe",@"Adaptive",nil];
     
 }
 
@@ -102,6 +102,12 @@
         {
             Swipe_First_VC * swipe = [[Swipe_First_VC alloc]init];
             [self.navigationController pushViewController:swipe animated:YES];
+        }
+            break;
+        case 4:
+        {
+            AdaptiveFirstControl * controll = [[AdaptiveFirstControl alloc]init];
+            [self.navigationController pushViewController:controll animated:YES];
         }
             break;
         default:

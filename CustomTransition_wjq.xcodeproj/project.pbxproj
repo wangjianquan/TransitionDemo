@@ -11,6 +11,9 @@
 		7C77DF751E76739D00A55985 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77DF741E76739D00A55985 /* AppDelegate.m */; };
 		7C77DF7D1E76739D00A55985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C77DF7C1E76739D00A55985 /* Assets.xcassets */; };
 		7C77DF801E76739D00A55985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C77DF7E1E76739D00A55985 /* LaunchScreen.storyboard */; };
+		7C7DDDBE1F0C97C10075B267 /* AdaptiveAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DDDBD1F0C97C10075B267 /* AdaptiveAnimator.m */; };
+		7C7DDDC21F0CB4620075B267 /* AdaptiveFirstControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DDDC11F0CB4620075B267 /* AdaptiveFirstControl.m */; };
+		7C7DDDC51F0CB47B0075B267 /* AdaptiveSecondControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DDDC41F0CB47B0075B267 /* AdaptiveSecondControl.m */; };
 		7C91681B1E77D4E6001E6B2E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C91681A1E77D4E6001E6B2E /* BaseViewController.m */; };
 		7C97EFFB1E7BD0E600E39E61 /* SlideTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C97EFFA1E7BD0E600E39E61 /* SlideTransitionAnimator.m */; };
 		7C97EFFE1E7BD52000E39E61 /* SlideTransitionInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C97EFFD1E7BD52000E39E61 /* SlideTransitionInteractionController.m */; };
@@ -40,6 +43,12 @@
 		7C77DF7C1E76739D00A55985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C77DF7F1E76739D00A55985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C77DF811E76739D00A55985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C7DDDBC1F0C97C10075B267 /* AdaptiveAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdaptiveAnimator.h; sourceTree = "<group>"; };
+		7C7DDDBD1F0C97C10075B267 /* AdaptiveAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdaptiveAnimator.m; sourceTree = "<group>"; };
+		7C7DDDC01F0CB4620075B267 /* AdaptiveFirstControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdaptiveFirstControl.h; sourceTree = "<group>"; };
+		7C7DDDC11F0CB4620075B267 /* AdaptiveFirstControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdaptiveFirstControl.m; sourceTree = "<group>"; };
+		7C7DDDC31F0CB47B0075B267 /* AdaptiveSecondControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdaptiveSecondControl.h; sourceTree = "<group>"; };
+		7C7DDDC41F0CB47B0075B267 /* AdaptiveSecondControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdaptiveSecondControl.m; sourceTree = "<group>"; };
 		7C9168191E77D4E6001E6B2E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		7C91681A1E77D4E6001E6B2E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		7C97EFF91E7BD0E600E39E61 /* SlideTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTransitionAnimator.h; sourceTree = "<group>"; };
@@ -135,12 +144,33 @@
 		7C77DF8D1E76796200A55985 /* TransitionTool */ = {
 			isa = PBXGroup;
 			children = (
+				7C7DDDBB1F0C97610075B267 /* Adaptive */,
 				7C97EFF81E7BD03E00E39E61 /* SlideTransition */,
 				7CFAC61F1E7933B800A095F1 /* CustomPresentSize */,
 				7CFAC61A1E7932CB00A095F1 /* Swipe */,
 				7CFAC61B1E79331500A095F1 /* Dissolve */,
 			);
 			path = TransitionTool;
+			sourceTree = "<group>";
+		};
+		7C7DDDBB1F0C97610075B267 /* Adaptive */ = {
+			isa = PBXGroup;
+			children = (
+				7C7DDDBC1F0C97C10075B267 /* AdaptiveAnimator.h */,
+				7C7DDDBD1F0C97C10075B267 /* AdaptiveAnimator.m */,
+			);
+			path = Adaptive;
+			sourceTree = "<group>";
+		};
+		7C7DDDBF1F0CB4320075B267 /* AdaptiveControl */ = {
+			isa = PBXGroup;
+			children = (
+				7C7DDDC01F0CB4620075B267 /* AdaptiveFirstControl.h */,
+				7C7DDDC11F0CB4620075B267 /* AdaptiveFirstControl.m */,
+				7C7DDDC31F0CB47B0075B267 /* AdaptiveSecondControl.h */,
+				7C7DDDC41F0CB47B0075B267 /* AdaptiveSecondControl.m */,
+			);
+			path = AdaptiveControl;
 			sourceTree = "<group>";
 		};
 		7C97EFF81E7BD03E00E39E61 /* SlideTransition */ = {
@@ -194,6 +224,7 @@
 			children = (
 				7CFAC6641E7A2F8100A095F1 /* ViewController.h */,
 				7CFAC6631E7A2F8100A095F1 /* ViewController.m */,
+				7C7DDDBF1F0CB4320075B267 /* AdaptiveControl */,
 				7CFAC66F1E7A6B9800A095F1 /* Swipe_Controller */,
 				7CFAC64E1E7A2F5D00A095F1 /* Custom_Controll */,
 				7CFAC6531E7A2F5D00A095F1 /* Custom_side_Controll */,
@@ -321,6 +352,7 @@
 				7CFAC6621E7A2F5D00A095F1 /* DissolveSecondVC.m in Sources */,
 				7C91681B1E77D4E6001E6B2E /* BaseViewController.m in Sources */,
 				7CFAC6751E7A6C0800A095F1 /* Swipe_Second_VC.m in Sources */,
+				7C7DDDC21F0CB4620075B267 /* AdaptiveFirstControl.m in Sources */,
 				7CFAC6611E7A2F5D00A095F1 /* DissolveFirstVC.m in Sources */,
 				7C97EFFE1E7BD52000E39E61 /* SlideTransitionInteractionController.m in Sources */,
 				7CFAC61E1E79338900A095F1 /* DissolveTransitionAnimator.m in Sources */,
@@ -335,7 +367,9 @@
 				7CFAC65E1E7A2F5D00A095F1 /* CustomPresentationSecondVC.m in Sources */,
 				7CFAC6601E7A2F5D00A095F1 /* CustomPresent_sideSecondVC.m in Sources */,
 				7CFAC6221E7933F400A095F1 /* CustomPresentation.m in Sources */,
+				7C7DDDBE1F0C97C10075B267 /* AdaptiveAnimator.m in Sources */,
 				7C77DF751E76739D00A55985 /* AppDelegate.m in Sources */,
+				7C7DDDC51F0CB47B0075B267 /* AdaptiveSecondControl.m in Sources */,
 				7CFAC65D1E7A2F5D00A095F1 /* CustomPresentationFirstVC.m in Sources */,
 				7C77DF721E76739D00A55985 /* main.m in Sources */,
 			);
