@@ -33,6 +33,8 @@
 
     seconed.transitioningDelegate = self;
     
+    
+    
     [self presentViewController:seconed animated:YES completion:nil];
 }
 

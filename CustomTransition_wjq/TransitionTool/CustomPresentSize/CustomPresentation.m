@@ -3,7 +3,7 @@
 //  CustomTransition_wjq
 //
 //  Created by landixing on 2017/3/13.
-//  Copyright © 2017年 landixing. All rights reserved.
+//  Copyright © 2017年 WJQ. All rights reserved.
 //
 
 #import "CustomPresentation.h"
@@ -36,47 +36,10 @@
     return  self;
 }
 
-- (UIView *)presentedView{
-    return self.presentationWrappingView;
 
-}
 // 呈现过渡即将开始的时候被调用的
 // 可以在此方法创建和设置自定义动画所需的view
 - (void)presentationTransitionWillBegin{
-    
-    UIView *presentedViewControllerView = [super presentedView];
-    {
-        /**/
-        UIView *presentationWrapperView = [[UIView alloc] initWithFrame:self.frameOfPresentedViewInContainerView];
-        presentationWrapperView.backgroundColor = [UIColor greenColor];
-        presentationWrapperView.layer.shadowOpacity = 0.44f;
-        presentationWrapperView.layer.shadowRadius = 5.f;
-        presentationWrapperView.layer.shadowOffset = CGSizeMake(0, -6.f);
-        self.presentationWrappingView = presentationWrapperView;
-        
-        /**/
-        UIView *presentationRoundedCornerView = [[UIView alloc] initWithFrame:UIEdgeInsetsInsetRect(presentationWrapperView.bounds, UIEdgeInsetsMake(0, 0, -CORNER_RADIUS, 0))];
-        presentationRoundedCornerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        presentationRoundedCornerView.layer.cornerRadius = CORNER_RADIUS;
-        presentationRoundedCornerView.layer.masksToBounds = YES;
-        /* */
-        UIView *presentedViewControllerWrapperView = [[UIView alloc] initWithFrame:UIEdgeInsetsInsetRect(presentationRoundedCornerView.bounds, UIEdgeInsetsMake(0, 0, CORNER_RADIUS, 0))];
-        presentedViewControllerWrapperView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        
-        // Add presentedViewControllerView -> presentedViewControllerWrapperView.
-        presentedViewControllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        presentedViewControllerView.frame = presentedViewControllerWrapperView.bounds;
-        
-        [presentedViewControllerWrapperView addSubview:presentedViewControllerView];
-        
-        // Add presentedViewControllerWrapperView -> presentationRoundedCornerView.
-        [presentationRoundedCornerView addSubview:presentedViewControllerWrapperView];
-        
-        // Add presentationRoundedCornerView -> presentationWrapperView.
-        [presentationWrapperView addSubview:presentationRoundedCornerView];
-    }
-    
-    {
         //背景遮罩设置
         UIView * dimmingView = [[UIView alloc]initWithFrame:self.containerView.bounds];
         dimmingView.backgroundColor = [UIColor blackColor];
@@ -96,7 +59,6 @@
             self.dimmingView.alpha = 0.5f;
         } completion:NULL];
         
-    }
 }
 
 #pragma mark 点击手势事件
@@ -179,7 +141,7 @@
 #pragma mark -- 动画执行时间
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext{
 
-    return [transitionContext isAnimated] ? 0.5 : 0 ;
+    return [transitionContext isAnimated] ? 0.25 : 0 ;
 }
 
 // 核心，动画效果的实现

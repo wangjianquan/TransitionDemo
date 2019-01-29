@@ -43,7 +43,7 @@
         
        
         presentedViewControllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        //presentedViewControllerView.layer.borderColor = [UIColor grayColor].CGColor;
+//        presentedViewControllerView.layer.borderColor = [UIColor grayColor].CGColor;
 //        presentedViewControllerView.layer.borderWidth = 2.f;
         [presentationWrapperView addSubview:presentedViewControllerView];
         
